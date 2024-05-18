@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - numpy
     - pbr
@@ -26,7 +27,6 @@ requirements:
     - python
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
