@@ -1,5 +1,5 @@
 {% set name = "fastremap" %}
-{% set version = "1.14.0" %}
+{% set version = "1.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastremap-{{ version }}.tar.gz
-  sha256: 189d329a60d741fcef8945ad79068e3165e80bc5aa69b8d8897c2d33e701e95c
+  sha256: 6f6ed313a44c8214fa97576338fb4af691eb9e3f3153b121f5f345abece7b8b2
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - numpy
     - pbr
