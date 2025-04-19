@@ -26,6 +26,7 @@ requirements:
     - pbr
     - pip
     - python
+    - cython
   run:
     - python
 
