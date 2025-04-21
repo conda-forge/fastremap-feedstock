@@ -22,6 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
+    - setuptools
     - numpy
     - pbr
     - pip
