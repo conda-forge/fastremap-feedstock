@@ -1,5 +1,5 @@
 {% set name = "fastremap" %}
-{% set version = "1.17.3" %}
+{% set version = "1.17.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastremap-{{ version }}.tar.gz
-  sha256: 6c9cb599a5b085e2918d41dd6b24601afd4987abc99197afcacb76aeb17abcb6
+  sha256: 2f0b99d12ec281ebd1a865c94ef55b61aba957348146649e6a917170f167d063
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
