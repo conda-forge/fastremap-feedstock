@@ -30,7 +30,7 @@ requirements:
     - cython
   run:
     - python
-
+    - packaging
 test:
   imports:
     - fastremap
